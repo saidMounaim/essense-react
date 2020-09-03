@@ -5,9 +5,9 @@ import useScript from './hooks/useScript';
 import Header from './components/Header';
 
 function App() {
-	useScript(`${window.location.origin}/assets/js/plugins.js`);
-	useScript(`${window.location.origin}/assets/js/classy-nav.min.js`);
-	useScript(`${window.location.origin}/assets/js/active.js`);
+	useScript(`/assets/js/plugins.js`);
+	useScript(`/assets/js/classy-nav.min.js`);
+	useScript(`/assets/js/active.js`);
 	return (
 		<Router>
 			<div className="App">

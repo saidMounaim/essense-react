@@ -1,5 +1,6 @@
 export const initialState = {
 	popularProducts: [],
+	cart: [],
 };
 
 function AppReducer(state, action) {
@@ -8,6 +9,16 @@ function AppReducer(state, action) {
 			return {
 				...state,
 				popularProducts: action.payload,
+			};
+		case 'ADD_TO_CART':
+			return {
+				...state,
+				cart: [...state.cart, action.payload],
+			};
+		case 'REMOVE_TO_CART':
+			return {
+				...state,
+				cart: action.payload,
 			};
 		default:
 			return state;

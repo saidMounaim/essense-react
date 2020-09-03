@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useGlobalValue } from '../context/GlobalState';
 
 const Header = () => {
+	const [{ cart }] = useGlobalValue();
 	return (
 		<header class="header_area">
 			<div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
@@ -64,7 +66,7 @@ const Header = () => {
 					<div class="cart-area">
 						<a href="#" id="essenceCartBtn">
 							<img src={`${window.location.origin}/assets/img/core-img/bag.svg`} alt="" />
-							<span>3</span>
+							<span>{cart?.length}</span>
 						</a>
 					</div>
 				</div>

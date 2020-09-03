@@ -8,11 +8,6 @@ const HomePage = () => {
 			<div class="cart-bg-overlay"></div>
 
 			<div class="right-side-cart-area">
-				<div class="cart-button">
-					<a href="#" id="rightSideCart">
-						<img src={`${window.location.origin}/assets/img/core-img/bag.svg`} alt="" /> <span>3</span>
-					</a>
-				</div>
 				{/* CART COMPONENT */}
 				<Cart />
 			</div>
